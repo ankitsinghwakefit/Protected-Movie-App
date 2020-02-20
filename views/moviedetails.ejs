@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div>
+      <form action="/movie/movieform/<%= existingdata._id %>" method="post">
+        <input type="hidden" name="_id" value="<%= existingdata._id %>">
+
+        <label for="Name">Movie </label>
+        <input type="text" value="<%= existingdata.Name %>" name="Name">
+
+        <label for="story">Story </label>
+        <input type="text" value="<%= existingdata.Story %>" name="Story">
+
+        <label for="rdate">Release </label>
+        <input type="text" value="<%= existingdata.Release %>" name="Release">
+
+        <label for="director">Director </label>
+        <input type="text" value="<%= existingdata.Director %>" name="Director">
+
+        <label for="rdate">Writers </label>
+        <input type="text" value="<%= existingdata.Writers %>" name="Writers">
+
+        <label for="Stars">Stars </label>
+        <input type="text" value="<%= existingdata.Stars %>" name="Stars">
+
+        <label for="rating">Rating </label>
+        <input type="text" value="<%= existingdata.Rating %>" name="Rating">
+
+        <input type="submit" value="Save Changes">
+        <input type="submit" value="Delete Movie">
+      </form>
+    </div>
+    <a href="/logout">logout</a>
+  </body>
+</html>
